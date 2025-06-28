@@ -5,6 +5,7 @@ export default function robots() {
         userAgent: '*',
         allow: '/',
         disallow: '/private/',
-      }
+      },
+      sitemap: 'https://yourdomain.com/sitemap.xml',
     }
   }
