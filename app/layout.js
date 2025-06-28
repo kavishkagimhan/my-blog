@@ -233,8 +233,8 @@ export default function RootLayout({ children }) {
         <meta name="copyright" content="© 2025 FreeDevTemplate. All rights reserved." />
         
         {/* Preload critical resources */}
-        {/* <link rel="preload" href="/fonts/geist-sans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/critical.css" as="style" /> */}
+        <link rel="preload" href="/fonts/geist-sans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/critical.css" as="style" />
       </head>
       
       <body 
@@ -281,39 +281,15 @@ export default function RootLayout({ children }) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              if ('serviceWorker' in navigator && '${process.env.NODE_ENV}' === 'production') {
+              if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js', {
-                    scope: '/'
-                  })
-                  .then(function(registration) {
-                    console.log('✅ Service Worker registered successfully:', registration.scope);
-                    
-                    // Check for updates
-                    registration.addEventListener('updatefound', function() {
-                      const newWorker = registration.installing;
-                      newWorker.addEventListener('statechange', function() {
-                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                          // New content is available, show update prompt
-                          if (confirm('New version available! Click OK to update.')) {
-                            newWorker.postMessage({ type: 'SKIP_WAITING' });
-                            window.location.reload();
-                          }
-                        }
-                      });
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                      console.log('SW registration failed: ', registrationError);
                     });
-                  })
-                  .catch(function(error) {
-                    console.warn('⚠️ Service Worker registration failed:', error);
-                    // Don't block the app if SW fails
-                  });
-                });
-              } else if ('serviceWorker' in navigator && '${process.env.NODE_ENV}' === 'development') {
-                // Unregister service worker in development to avoid caching issues
-                navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                  for(let registration of registrations) {
-                    registration.unregister();
-                  }
                 });
               }
             `,
