@@ -1,0 +1,104 @@
+{
+    "name": "FreeDevTemplate - Premium Free Web Templates",
+    "short_name": "FreeDevTemplate",
+    "description": "Download beautiful, responsive web templates and UI components. Free premium-quality resources for developers and designers.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-US",
+    "dir": "ltr",
+    "categories": ["productivity", "developer", "design"],
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon-16x16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      }
+    ],
+    "shortcuts": [
+      {
+        "name": "Browse Templates",
+        "short_name": "Templates",
+        "description": "Browse our collection of free templates",
+        "url": "/templates",
+        "icons": [
+          {
+            "src": "/shortcut-templates.png",
+            "sizes": "96x96"
+          }
+        ]
+      },
+      {
+        "name": "Components",
+        "short_name": "Components",
+        "description": "Explore UI components",
+        "url": "/components",
+        "icons": [
+          {
+            "src": "/shortcut-components.png",
+            "sizes": "96x96"
+          }
+        ]
+      },
+      {
+        "name": "Blog",
+        "short_name": "Blog",
+        "description": "Read development tutorials and tips",
+        "url": "/blog",
+        "icons": [
+          {
+            "src": "/shortcut-blog.png",
+            "sizes": "96x96"
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshot-wide.png",
+        "sizes": "1280x720",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "FreeDevTemplate homepage on desktop"
+      },
+      {
+        "src": "/screenshot-narrow.png",
+        "sizes": "390x844",
+        "type": "image/png",
+        "form_factor": "narrow",
+        "label": "FreeDevTemplate homepage on mobile"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "webapp",
+        "url": "https://freedevtemplate.com/manifest.json"
+      }
+    ],
+    "prefer_related_applications": false
+  }
