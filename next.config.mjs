@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: ['cdn.pixabay.com']
-      // Optional: you can add more domains if needed
-      // domains: ['cdn.pixabay.com', 'example.com', 'another-cdn.com'],
-    },
-  };
-  
-  export default nextConfig;
+  images: {
+    domains: [
+      'cdn.pixabay.com',
+      'lh3.googleusercontent.com' // Add this line for Google user content
+    ]
+  }
+};
+
+export default nextConfig;
