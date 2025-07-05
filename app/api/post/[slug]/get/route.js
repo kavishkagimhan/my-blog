@@ -1,5 +1,6 @@
 import dbConnect from '@/lib/db';
-import Post from '@/models/Post';
+import Post from '../../../../models/Post';
+
 
 export async function GET(request, { params }) {
   try {
